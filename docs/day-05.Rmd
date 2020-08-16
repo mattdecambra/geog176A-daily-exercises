@@ -1,6 +1,6 @@
 ---
 title: "Daily Exercise 05"
-author: "Mike Johnson"
+author: "Matt DeCambra"
 output: html_document
 ---
 
@@ -47,6 +47,15 @@ to print the top 5 columns of the raw covid `object`
 
 ## Question 1: 
 
+# A tibble: 5 x 3
+  county        state       cases
+  <chr>         <chr>       <dbl>
+1 New York City New York   234609
+2 Los Angeles   California 220762
+3 Miami-Dade    Florida    144406
+4 Maricopa      Arizona    128865
+5 Cook          Illinois   115344
+
 Use `dplyr` verbs to  create a data.frame of the **5** counties with the most current cases. Remember, the cases and deaths are cumulative, so you only need to deal with the data for the most current (`max`) date.
 
 (**Hint:** `filter`, `arrange`)
@@ -56,6 +65,14 @@ Use `dplyr` verbs to  create a data.frame of the **5** counties with the most cu
 ```
 
 ## Question 2: 
+# A tibble: 5 x 2
+  state       cases
+  <chr>       <dbl>
+1 California 621981
+2 Florida    569629
+3 Texas      552828
+4 New York   429617
+5 Georgia    218344
 
 Use `dplyr` verbs to create a data.frame of the **5** states with the _most_ cases current cases. 
 
@@ -68,6 +85,9 @@ Use `dplyr` verbs to create a data.frame of the **5** states with the _most_ cas
 ## Question 3: 
 
 Use the `dplyr` verbs to report the **5** counties with the _worst_ current death/cases ratio: (e.g.$100* (deaths/cases)$)
+New Jersey Connecticut  New Jersey  New Jersey Connecticut 
+   "Sussex" "Middlesex"    "Warren"    "Morris"  "Hartford" 
+> 
 
 (**Hint:** `filter`, `mutate`, `arrange`)
 
@@ -77,6 +97,9 @@ Use the `dplyr` verbs to report the **5** counties with the _worst_ current deat
 
 
 ## Question 4: 
+summarise()` ungrouping output (override with `.groups` argument)
+  Connecticut    New Jersey      New York Massachusetts      Michigan 
+     8.749042      8.405492      7.544860      7.164019      6.467579 
 
 Use the `dplyr` verbs to report the **5** states with the _worst_ current death/case ratio.
 
